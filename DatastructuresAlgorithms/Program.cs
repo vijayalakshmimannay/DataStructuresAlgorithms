@@ -5,15 +5,22 @@ namespace DatastructuresAlgorithms
 {
     class program
     {
+
         public static void Main(String[] args)
         {
-            Mergesort ob = new Mergesort();
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
-            Console.WriteLine("Given Array");
-            ob.sort(arr, 0, arr.Length - 1);
-            Console.WriteLine("\nSorted array");
-            ob.printArray(arr);
+
+            string[] names = { "vijaya lakshmi", "lakshmi vijaya", "lakshmi mannay", "mannnay lakshmi" };
+            DatastructuresAlgorithms.Insertionsort value = new DatastructuresAlgorithms.Insertionsort();
+            value.InsertionSort(names);
+            foreach (var item in names)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
         }
+
 
     }
 }
