@@ -5,22 +5,26 @@ namespace DatastructuresAlgorithms
 {
     class program
     {
-
-        public static void Main(String[] args)
+        static void Main(string[] args)
         {
-
-            string[] names = { "vijaya lakshmi", "lakshmi vijaya", "lakshmi mannay", "mannnay lakshmi" };
-            DatastructuresAlgorithms.Insertionsort value = new DatastructuresAlgorithms.Insertionsort();
-            value.InsertionSort(names);
-            foreach (var item in names)
+            string firstString, secondString;
+            //Gets words from user.  
+            Console.WriteLine("Enter first string");
+            firstString = Console.ReadLine();
+            Console.WriteLine("Enter second string");
+            secondString = Console.ReadLine();
+            Anagram anagram = new Anagram();
+            //Check if words are anagram  
+            if (anagram.areAnagram(firstString, secondString) == true)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Both string are anagram string.");
             }
-
-
-
+            else
+            {
+                Console.WriteLine("Both string are not anagram string.");
+            }
+            Console.ReadLine();
         }
-
-
     }
+
 }
